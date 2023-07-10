@@ -1,0 +1,17 @@
+@import "../../../../scss-config/functions.scss";
+
+header {
+    width: 100%;
+    padding: rem-calc(40) rem-calc(20);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    h1 {
+        font-weight: bolder;
+        font-style: italic;
+        cursor: pointer;
+    }
+}
