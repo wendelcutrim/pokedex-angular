@@ -1,0 +1,28 @@
+@import "../../../../scss-config/variables.scss";
+@import "../../../../scss-config/functions.scss";
+
+.card {
+    width: rem-calc(290);
+    display: flex;
+    justify-content: space-between;
+
+    color: black;
+    background-color: $color-white;
+
+    padding: rem-calc(20);
+    border-radius: 10px;
+
+    &__datails {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+
+            list-style: none;
+        }
+    }
+
+    .chips {
+        list-style: none;
+    }
+}

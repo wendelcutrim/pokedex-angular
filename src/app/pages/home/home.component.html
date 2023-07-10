@@ -1,11 +1,22 @@
 <section class="search">
-    <form>
-        <input type="text" placeholder="Search Pokemon..." />
+    <form [ngClass]="{ 'focus-form': inputOnFocus }">
+        <input
+            type="text"
+            placeholder="Buscar Pokemon..."
+            aria-label="buscar pokemon"
+            (focus)="setFormOutline()"
+            (blur)="removeFormOutline()"
+        />
 
-        <button type="submit" aria-label="Search">
+        <button type="submit" aria-label="buscar">
             <span class="material-symbols-outlined" aria-hidden="true"> search </span>
         </button>
     </form>
 </section>
 
-<poke-card></poke-card>
+<section class="poke__list">
+    <poke-card></poke-card>
+    <poke-card></poke-card>
+    <poke-card></poke-card>
+    <poke-card></poke-card>
+</section>

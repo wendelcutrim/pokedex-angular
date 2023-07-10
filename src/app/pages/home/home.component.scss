@@ -34,9 +34,23 @@
             display: grid;
             place-items: center;
         }
+
+        &.focus-form {
+            outline: 2px solid white;
+        }
     }
 
     .material-symbols-outlined {
         color: white;
+    }
+}
+
+.poke {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 }

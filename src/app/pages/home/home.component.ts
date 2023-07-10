@@ -8,10 +8,19 @@ import { Title } from "@angular/platform-browser";
 })
 export class HomeComponent implements OnInit {
     title: string = "Pokedex | Home";
+    inputOnFocus: boolean = false;
 
     constructor(private titleService: Title) {}
 
     ngOnInit(): void {
         this.titleService.setTitle(this.title);
+    }
+
+    setFormOutline(): void {
+        this.inputOnFocus = true;
+    }
+
+    removeFormOutline(): void {
+        this.inputOnFocus = false;
     }
 }
