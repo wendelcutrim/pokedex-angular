@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./scss-config/variables.scss";
+@import "./scss-config/functions.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@100&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: $primary-color;
+    color: $color-white;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container {
+    max-width: rem-calc(600);
+    width: 100%;
+    margin: 0 auto;
+}
