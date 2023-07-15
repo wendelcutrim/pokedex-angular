@@ -1,12 +1,12 @@
-<a class="card" href="#">
+<a class="card" [routerLink]="['/pokemon', pokemon.status.id]" *ngIf="pokemon.status">
     <div class="card__details">
         <h2>{{ pokemon.name }}</h2>
         <ul class="chips">
-            <li *ngFor="let value of pokemon.status?.types">{{ value?.type?.name }}</li>
+            <li *ngFor="let value of pokemon.status.types">{{ value.type.name }}</li>
         </ul>
         <!-- <p>see more...</p> -->
     </div>
     <div class="card__image">
-        <img [src]="pokemon.status?.sprites?.other?.dream_world?.front_default" [alt]="pokemon.name" />
+        <img [src]="pokemon.status.sprites.other?.dream_world?.front_default" [alt]="pokemon.name" />
     </div>
 </a>

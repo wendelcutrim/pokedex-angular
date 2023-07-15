@@ -1,11 +1,13 @@
 <section class="search">
-    <form [ngClass]="{ 'focus-form': inputOnFocus }">
+    <form [ngClass]="{ 'focus-form': inputOnFocus }" [formGroup]="searchForm" (ngSubmit)="searchPokemon()">
         <input
             type="text"
             placeholder="Buscar Pokemon..."
             aria-label="buscar pokemon"
             (focus)="setFormOutline()"
             (blur)="removeFormOutline()"
+            formControlName="q"
+            (keyup)="searchPokemon()"
         />
 
         <button type="submit" aria-label="buscar">
@@ -13,6 +15,7 @@
         </button>
     </form>
 </section>
+<p>{{ searchForm.get("q")?.value | json }}</p>
 
 <section class="poke__list">
     <div *ngFor="let pokemon of pokemons">
