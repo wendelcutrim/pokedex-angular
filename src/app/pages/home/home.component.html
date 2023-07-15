@@ -15,8 +15,7 @@
 </section>
 
 <section class="poke__list">
-    <poke-card></poke-card>
-    <poke-card></poke-card>
-    <poke-card></poke-card>
-    <poke-card></poke-card>
+    <div *ngFor="let pokemon of pokemons">
+        <poke-card [pokemon]="pokemon"></poke-card>
+    </div>
 </section>

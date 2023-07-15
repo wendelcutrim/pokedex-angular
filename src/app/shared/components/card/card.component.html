@@ -1,13 +1,12 @@
 <a class="card" href="#">
     <div class="card__details">
-        <h2>Bulbasaur</h2>
+        <h2>{{ pokemon.name }}</h2>
         <ul class="chips">
-            <li>Grass</li>
-            <li>Poison</li>
+            <li *ngFor="let value of pokemon.status?.types">{{ value?.type?.name }}</li>
         </ul>
-        <p>see more...</p>
+        <!-- <p>see more...</p> -->
     </div>
     <div class="card__image">
-        <img src="/assets/img/pokemon.png" alt="bulbasaur" />
+        <img [src]="pokemon.status?.sprites?.other?.dream_world?.front_default" [alt]="pokemon.name" />
     </div>
 </a>
